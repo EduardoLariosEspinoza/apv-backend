@@ -34,7 +34,12 @@ const corsOptions = {
   },
 };
 
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 // /api/veterinarios es el prefijo de la ruta que se va a usar
 app.use("/api/veterinarios", veterinarioRoutes);

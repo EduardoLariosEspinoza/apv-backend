@@ -33,6 +33,7 @@ const checkAuth = async (req, res, next) => {
     res.status(403).json({ message: error.message });
   }
 
+  // Si no hay errores, continua con la siguiente funcion en la ruta
   next();
 };
 
